@@ -1,0 +1,17 @@
+{
+  "group": {
+    "default": {
+      "targets": [
+        "ceph-testing"
+      ]
+    }
+  },
+  "target": {
+    "ceph-testing": {
+      "dockerfile": "Dockerfile",
+      "tags": [
+        "ghcr.io/snapp-incubator/ceph-testing-container"
+      ]
+    }
+  }
+}
