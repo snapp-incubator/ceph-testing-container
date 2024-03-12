@@ -8,6 +8,9 @@
   },
   "target": {
     "ceph-testing": {
+      "args": {
+        "GOARCH": "amd64",
+      },
       "dockerfile": "Dockerfile",
       "tags": [
         "ghcr.io/snapp-incubator/ceph-testing-container"
