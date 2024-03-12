@@ -7,13 +7,26 @@
     }
   },
   "target": {
-    "ceph-testing": {
+    "ceph-testing-latest": {
       "args": {
-        "GOARCH": "amd64"
+        "GOARCH": "amd64",
+        "CEPH_TAG": "v16"
       },
       "dockerfile": "Dockerfile",
       "tags": [
-        "ghcr.io/snapp-incubator/ceph-testing-container"
+        "ghcr.io/snapp-incubator/ceph-testing-container:latest",
+        "ghcr.io/snapp-incubator/ceph-testing-container:v16"
+      ]
+    },
+    "ceph-testing-legacy": {
+      "inherits": [
+        "ceph-testing-latest"
+      ],
+      "args": {
+        "CEPH_TAG": "v14.2.6"
+      },
+      "tags": [
+        "ghcr.io/snapp-incubator/ceph-testing-container:v14.2.6"
       ]
     }
   }
