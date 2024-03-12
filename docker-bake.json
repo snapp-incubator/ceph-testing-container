@@ -2,7 +2,8 @@
   "group": {
     "default": {
       "targets": [
-        "ceph-testing"
+        "ceph-testing-latest",
+        "ceph-testing-legacy"
       ]
     }
   },
