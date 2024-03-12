@@ -12,7 +12,7 @@ ENV GO_CEPH_VERSION=${GO_CEPH_VERSION:-$CEPH_VERSION}
 RUN true && \
   echo "Check: [ ${CEPH_VERSION} = ${GO_CEPH_VERSION} ]" && \
   [ "${CEPH_VERSION}" = "${GO_CEPH_VERSION}" ] && \
-  yum update -y --disablerepo=ganesha && \
+  yum update -y && \
   cv="$(rpm -q --queryformat '%{version}-%{release}' ceph-common)" && \
   yum install -y \
   git wget curl make \
