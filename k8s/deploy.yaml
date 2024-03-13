@@ -22,7 +22,7 @@ spec:
             runAsUser: 0
           runAsNonRoot: false
           image: ghcr.io/snapp-incubator/ceph-testing-container:v14.2.6
-          imagePullPolicy: always
+          imagePullPolicy: Always
           ports:
             - name: http
               containerPort: 80
